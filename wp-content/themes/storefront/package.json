@@ -1,0 +1,15 @@
+{
+  "name": "shopnhat",
+  "version": "1.0.0",
+  "description": "=== Storefront === Contributors: automattic, tiagonoronha, jameskoster Requires at least: 4.7 Tested up to: 4.9.4 Stable tag: 2.2.8 Version: 2.2.8 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vu",
+  "license": "ISC"
+}

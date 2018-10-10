@@ -155,12 +155,13 @@ Template Name: home page
 									<div class="col-md-3 arrival-grid simpleCart_shelfItem">
 										<div class="grid-arr">
 											<div  class="grid-arrival">
-												<figure>		
-													<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
-														<div class="grid-img">
-															<?php $img = get_the_post_thumbnail_url(get_the_ID(),'img_home_produce'); ?>
 
+												<figure>		
+													<a href="<?= get_permalink($id) ?>" target="_blank" class="new-gri" data-toggle="modal" data-target="#myModal1">
+														<div class="grid-img">	
+															<?php $img = get_the_post_thumbnail_url(get_the_ID(),'img_home_produce'); ?>
 															<img  src="<?= $img ?>" class="img-responsive" alt="">
+															
 														</div>
 														<div class="grid-img">
 															<?php foreach( $attachment_ids as $attachment_id ) {
@@ -175,15 +176,27 @@ Template Name: home page
 												</figure>	
 											</div>
 											<div class="ribben">
-												<p>NEW</p>
+												<p>Mới</p>
 											</div>
 											<?php if($Check_sale){ ?>
 											<div class="ribben1">
-												<p>SALE</p>
+												<p>Giảm giá</p>
 											</div>
 											<?php } ?>
 											<div class="block">
-												<div class="starbox small ghosting"> </div>
+									
+												<?php  $rating_count = $product->get_rating_count();
+													$review_count = $product->get_review_count();
+													$average      = $product->get_average_rating();
+
+													if ( $rating_count > 0 ) : ?>
+
+														<div class="woocommerce-product-rating">
+															<?php echo wc_get_rating_html( $average, $rating_count ); ?>
+															
+														</div>
+
+													<?php endif; ?>
 											</div>
 											<div class="women">
 												<h6><a href="single.html"><?php the_title(); ?></a></h6>
@@ -219,11 +232,11 @@ Template Name: home page
 				<!--accessories-->
 			<div class="accessories-w3l" style="background: url('wp-content/themes/storefront/source/images/ban1.jpg')">
 				<div class="container">
-					<h3 class="tittle">20% Discount on</h3>
-					<span>TRENDING DESIGNS</span>
+					<h3 class="tittle">Giảm giá lên tới 30%</h3>
+					<span>Xu hướng thời trang</span>
 					<div class="button">
-						<a href="#" class="button1"> Shop Now</a>
-						<a href="#" class="button1"> Quick View</a>
+						<a href="/shop" class="button1"> Xem ngay!</a>
+						<a href="#" class="button1"> Bỏ qua</a>
 					</div>
 				</div>
 			</div>

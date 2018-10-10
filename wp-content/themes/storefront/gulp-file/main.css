@@ -5,10 +5,56 @@
   color: black; }
 
 a:hover, a:focus {
-  color: black !important;
+  color: #35c11d !important;
   text-decoration: none !important; }
 
 .ysm-search-widget .search-field[type="search"] {
   background: none 50% 50% no-repeat white;
   border: 1px solid #1565c0;
   color: black; }
+
+.site-header-cart .cart-contents:after,
+.storefront-handheld-footer-bar ul li.cart > a:before {
+  content: "\f07a";
+  color: white; }
+
+.logo-nav-left h1 a:hover {
+  color: #fff !important; }
+
+.cart-contents {
+  font-size: 25px;
+  padding: 10px 0px !important; }
+  .cart-contents .count {
+    font-size: 18px;
+    padding-right: 13px;
+    color: white; }
+
+.cd-header-buttons {
+  position: absolute;
+  display: inline-block;
+  right: 20% !important; }
+
+.top-left {
+  color: white; }
+
+.comment-form-comment {
+  margin-bottom: 10px !important; }
+
+.star-rating {
+  margin: 0 auto; }
+  .star-rating span:before {
+    color: #F19E1F !important; }
+
+@media (max-width: 736px) {
+  .logo-nav-left1 {
+    width: 100% !important; } }
+
+@media (max-width: 768px) {
+  .cd-header-buttons {
+    top: 120px !important; } }
+
+.woocommerce-mini-cart__total.total {
+  color: black; }
+
+.breadcrumbs.container {
+  padding: 20px 0px; }

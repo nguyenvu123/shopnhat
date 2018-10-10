@@ -50,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-top">
 				<div class="container">
 					 <div class="top-left">
-					 <span>Help  <i class="fa fa-phone" aria-hidden="true"></i> </span><a href="#">+0123-456-789</a>
+					 <span>Help  <i class="fa fa-phone" aria-hidden="true"></i> </span><a href="tel:<?= get_field("dien_thoai","option") ?>"><?= get_field("dien_thoai","option")?></a> 
 					</div>
 					<div class="top-right">
 					<ul>
@@ -133,9 +133,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!--header-->
 
 		<?php
-		/**
-		 * Functions hooked in to storefront_content_top
-		 *
-		 * @hooked woocommerce_breadcrumb - 10
-		 */
-		do_action( 'storefront_content_top' );
+		 if (function_exists('bcn_display')) { ?>
+                <div class="breadcrumbs container">
+                    <ul>
+                        <?php bcn_display(); ?>
+                    </ul>
+                </div>
+            <?php } ?>
+                

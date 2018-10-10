@@ -16,25 +16,18 @@
 					<div class="footer-w3l">
 						<div class="container">
 							<div class="footer-grids">
-								<div class="col-md-3 footer-grid">
+								<div class="col-md-4 footer-grid">
 									<h4>Thông tin về chúng tôi </h4>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+									<p><?= get_field("giới_thiệu","option") ?></p>
 									<div class="social-icon">
-										<a href="#"><i class="icon1 fa fa-facebook" aria-hidden="true"></i></a>
-										<a href="#"><i class="icon1 fa fa-envelope" aria-hidden="true"></i></i></a>
-										<a href="#"><i class="icon1 fa fa-twitter" aria-hidden="true"></i></a>
+										<a href="<?= get_field("link_facebook","option") ?>"><i class="icon1 fa fa-facebook" aria-hidden="true"></i></a>
+										<a href="mailto:<?= get_field("link_email","option"); ?>"><i class="icon1 fa fa-envelope" aria-hidden="true"></i></i></a>
+										
 										
 									</div>
 								</div>
-								<div class="col-md-3 footer-grid">
-									<h4>My Account</h4>
-									<ul>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="login.html">Login</a></li>
-										<li><a href="registered.html"> Create Account </a></li>
-									</ul>
-								</div>
-								<div class="col-md-3 footer-grid">
+								
+								<div class="col-md-4 footer-grid">
 									<h4>Thông tin</h4>
 									<ul>
 										<li><a href="index.html">Home</a></li>
@@ -44,14 +37,14 @@
 										<li><a href="products1.html">products1</a></li>
 									</ul>
 								</div>
-								<div class="col-md-3 footer-grid foot">
+								<div class="col-md-4 footer-grid foot">
 									<h4>Liên hệ</h4>
 									<ul>
-										<li><i class="fa fa-location-arrow" aria-hidden="true"></i></i><a href="#">61 thao dien</a></li>
-										<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><a href="#">1 599-033-5036</a></li>
-										<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com"> example@mail.com</a></li>
+										<li><i class="fa fa-location-arrow" aria-hidden="true"></i></i><a href="#"><?= get_field("dia_chi","option") ?></a></li>
+										<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i><a href="tel:<?=get_field("dien_thoai","option")?>"><?= get_field("dien_thoai","option") ?></a></li>
+										<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:<?= get_field("email","option") ?>"> <?= get_field("email","option") ?></a></li>
 										
-									</ul>
+									</ul> 
 								</div>
 							<div class="clearfix"> </div>
 							</div>

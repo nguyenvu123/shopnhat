@@ -144,7 +144,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 </div>
-<div class="cart-collaterals">
+<div class="container">
+	<div class="cart-collaterals">
 	<?php
 		/**
 		 * Cart collaterals hook.
@@ -155,5 +156,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		do_action( 'woocommerce_cart_collaterals' );
 	?>
 </div>
+</div>
+
 
 <?php do_action( 'woocommerce_after_cart' ); ?>

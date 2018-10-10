@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+<div class="container">
+	
 
 <div class="woocommerce-order">
 
@@ -84,4 +86,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php endif; ?>
 
+</div>
 </div>

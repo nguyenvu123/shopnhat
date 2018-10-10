@@ -1,0 +1,16 @@
+add-to-any
+contact-form-7
+contact-form-7-dynamic-text-extension
+fast-velocity-minify
+google-captcha
+really-simple-ssl
+regenerate-thumbnails
+responsive-lightbox
+simple-history
+simple-post-type-permalinks
+tinymce-advanced
+tinymce-custom-styles
+wordpress-seo
+wp-mail-logging
+wp-migrate-db
+members

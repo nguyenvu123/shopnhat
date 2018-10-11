@@ -5,3 +5,4 @@ smart-woocommerce-search
 jetpack
 custom-post-type-ui
 advanced-custom-fields
+wordpress-seo

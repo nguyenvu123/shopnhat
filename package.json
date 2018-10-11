@@ -1,0 +1,19 @@
+{
+  "name": "shopnhat",
+  "version": "1.0.0",
+  "description": "Your database **should** be the exact copy of the production.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenvu123/shopnhat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenvu123/shopnhat/issues"
+  },
+  "homepage": "https://github.com/nguyenvu123/shopnhat#readme"
+}

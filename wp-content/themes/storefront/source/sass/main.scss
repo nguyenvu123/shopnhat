@@ -1,4 +1,6 @@
-
+.header{
+	position: relative;
+}
 .right-sidebar .content-area{
 	background: #F9F8F8;
 }
@@ -39,15 +41,6 @@ a:hover, a:focus {
     	color: white;
     }
 }
-.cd-header-buttons {
-    position: absolute;
-    display: inline-block;
-  
-    right: 20% !important;
-}
-.cd-search.is-visible{
-	
-}
 .top-left{
 	color: white;
 }
@@ -68,14 +61,48 @@ a:hover, a:focus {
 }
 }
 
-@media (max-width: 768px){
-.cd-header-buttons {
-top: 120px !important;
-	}
-}
 .woocommerce-mini-cart__total.total{
 	color: black;
 }
 .breadcrumbs.container{
 	padding: 20px 0px;
+}
+.cd-search{
+	position: absolute;
+	top: 100% !important;
+}
+#menu-menu-main{
+	li{
+		a{
+
+			&:after{
+				transition: 1s;
+				content: '';
+				width: 0%;
+				height: 1px; 
+				display: block;
+				background: #829c80;
+
+			}
+			&:hover{
+				&:after{
+					width: 100%;
+				}
+			}
+		}
+		
+		
+	}
+}
+.heder-bottom{
+	.container{
+		position: relative;
+		.cd-header-buttons{
+			top: 0% !important;
+			right: 0% !important;
+		}
+	}
+}
+h2{
+	font-size: 20px !important;
 }

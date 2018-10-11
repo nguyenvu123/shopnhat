@@ -1036,7 +1036,7 @@ h3.tittle1 {
 	    border-radius: 16px;
 }
 .social-icon i.icon:hover {
-  background: #AF1D0D   url(../images/img-sprite.png) no-repeat 0px 0px;
+ 
       border-radius: 0px;
 	      transform: rotate(25deg);
 }
@@ -1061,11 +1061,6 @@ h3.tittle1 {
 }
 .social-icon i.icon3 {
     background-position: -96px 0px;
-}
-.social-icon i.icon3:hover {
-  background: #AF1D0D   url(../images/img-sprite.png) no-repeat -96px 0px;
-      border-radius: 0px;
-	      transform: rotate(25deg);
 }
 .news-grid p {
     font-size: 1em;

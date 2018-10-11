@@ -17,7 +17,7 @@ Template Name: home page
 							    	while ( have_rows('images') ) : the_row(); ?>
 
 							      	<div class="core-slider_item">
-										<img src="<?= get_sub_field('image') ?>" class="img-responsive" alt="">
+										<img src="<?= get_sub_field('image') ?>" class="img-responsive" alt="shop-nhat">
 									</div>
 										<?php
 							    endwhile;
@@ -61,7 +61,7 @@ Template Name: home page
                                 ?>
 
 
-								<a href="<?= get_term_link( $terms_category_hot[0]->slug, 'product_cat' ) ?>"><img src="<?= $term_img; ?>" class="img-responsive" alt=""/></a>
+								<a href="<?= get_term_link( $terms_category_hot[0]->slug, 'product_cat' ) ?>"><img src="<?= $term_img; ?>" class="img-responsive" alt="shop-nhat"/></a>
 								<div class="ban-text">
 									<h4><?= $terms_category_hot[0]->name; ?></h4>
 								</div>
@@ -77,7 +77,7 @@ Template Name: home page
                                 $term_img1 = wp_get_attachment_url(  $thumb_id1 );
                                 
                                  ?>
-									<a href="<?= get_term_link( $terms_category_hot[1]->slug, 'product_cat' ) ?>"><img src="<?= $term_img1  ?>" class="img-responsive" alt=""/></a>
+									<a href="<?= get_term_link( $terms_category_hot[1]->slug, 'product_cat' ) ?>"><img src="<?= $term_img1  ?>" class="img-responsive" alt="shop-nhat"/></a>
 								<div class="ban-text1">
 									<h4><?= $terms_category_hot[1]->name; ?></h4>
 								</div>
@@ -90,7 +90,8 @@ Template Name: home page
 		                                $term_img2 = wp_get_attachment_url(  $thumb_id2 );
 		                                
 		                                 ?>
-										<img src="<?= $term_img2 ?>" class="img-responsive" alt=""/>
+		                                 <a href="<?= get_term_link( $terms_category_hot[3]->slug, 'product_cat' ) ?>"><img src="<?= $term_img2 ?>" class="img-responsive" alt="shop-nhat"/></a>
+										
 										<div class="ban-text1">
 											<h4><?= $terms_category_hot[2]->name; ?></h4>
 										</div>
@@ -155,9 +156,8 @@ Template Name: home page
 									<div class="col-md-3 arrival-grid simpleCart_shelfItem">
 										<div class="grid-arr">
 											<div  class="grid-arrival">
-
 												<figure>		
-													<a href="<?= get_permalink($id) ?>" target="_blank" class="new-gri" data-toggle="modal" data-target="#myModal1">
+													<a href="<?= get_permalink($id) ?>" target="_blank" class="new-gri">
 														<div class="grid-img">	
 															<?php $img = get_the_post_thumbnail_url(get_the_ID(),'img_home_produce'); ?>
 															<img  src="<?= $img ?>" class="img-responsive" alt="">
@@ -199,7 +199,7 @@ Template Name: home page
 													<?php endif; ?>
 											</div>
 											<div class="women">
-												<h6><a href="single.html"><?php the_title(); ?></a></h6>
+												<h6><a href="<?= get_permalink($id) ?>"><?php the_title(); ?></a></h6>
 												<?php if($Check_sale){ ?>
 												<p ><del><?=number_format((float)$product->get_price()); ?>đ</del>  
 													

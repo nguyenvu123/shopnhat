@@ -57,9 +57,7 @@
 							<div class="copy-left">
 								<p>&copy; 2018 New Shop . All rights reserved | create by Vusaka</p>
 							</div>
-							<div class="copy-right">
-								<img src="images/card.png" alt=""/>
-							</div>
+							
 							<div class="clearfix"></div>
 						</div>
 					</div>

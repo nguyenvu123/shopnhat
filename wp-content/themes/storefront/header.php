@@ -131,13 +131,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<!--header-->
-
 		<?php
-		 if (function_exists('bcn_display')) { ?>
-                <div class="breadcrumbs container">
-                    <ul>
-                        <?php bcn_display(); ?>
-                    </ul>
-                </div>
-            <?php } ?>
+		 if (function_exists('bcn_display') && !is_front_page()) { ?>
+            <div class="breadcrumbs container">
+                <ul>
+                    <?php bcn_display(); ?>
+                </ul>
+            </div>
+        <?php } ?>
                 

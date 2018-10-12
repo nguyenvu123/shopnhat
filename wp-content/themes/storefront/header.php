@@ -54,9 +54,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="top-right">
 					<ul>
-						<li><a href="#"><i class="icon1 fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="icon1 fa fa-envelope" aria-hidden="true"></i></i></a></li>
-						<li><a href="#"><i class="icon1 fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="tel:<?=get_field("dien_thoai","option")?>"><i class="icon1 fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="mailto: <?= get_field("email","option") ?>"><i class="icon1 fa fa-envelope" aria-hidden="true"></i></i></a></li>
 					</ul>
 					</div>
 					<div class="clearfix"></div>

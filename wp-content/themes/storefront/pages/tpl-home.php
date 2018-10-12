@@ -66,7 +66,7 @@ Template Name: home page
 									<h4><?= $terms_category_hot[0]->name; ?></h4>
 								</div>
 								<div class="ban-text2 hvr-sweep-to-top">
-									<h4>50% <span>Off/-</span></h4>
+									<h4><?= get_field("percent_top") ?>% <span>Off/-</span></h4>
 								</div>
 							</div>
 						</div>
@@ -149,7 +149,7 @@ Template Name: home page
 
 										    global $product;
 
-										    $attachment_ids = $product->get_gallery_attachment_ids();
+										    $attachment_ids = $product->get_gallery_image_ids();
 
 										    
 										?>
@@ -229,11 +229,12 @@ Template Name: home page
 
 
 			<!--new-arrivals-->
+			<?php $id = get_option( 'page_on_front' ); ?>
 				<!--accessories-->
 			<div class="accessories-w3l" style="background: url('wp-content/themes/storefront/source/images/ban1.jpg')">
 				<div class="container">
-					<h3 class="tittle">Giảm giá lên tới 30%</h3>
-					<span>Xu hướng thời trang</span>
+					<h3 class="tittle"><?= get_field("text_top_banner",$id); ?></h3>
+					<span><?= get_field("text_sub",$id) ?></span>
 					<div class="button">
 						<a href="/shop" class="button1"> Xem ngay!</a>
 						<a href="#" class="button1"> Bỏ qua</a>
@@ -245,7 +246,8 @@ Template Name: home page
 			<!--Products-->
 			<div class="latest-w3">
 				<div class="container">
-					<h3 class="tittle1">Sản phẩm</h3>
+					
+					<h3 class="tittle1"><?= get_field("title_category",$id); ?></h3>
 					<div class="latest-grids">
 						
 						<?php 	

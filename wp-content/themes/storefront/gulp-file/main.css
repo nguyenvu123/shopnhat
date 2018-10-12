@@ -76,3 +76,9 @@ a:hover, a:focus {
 
 h2 {
   font-size: 20px !important; }
+
+.footer-grid ul li a:hover {
+  background: #1565C0; }
+
+.footer-w3l #menu-menu-main-1 {
+  text-align: left; }

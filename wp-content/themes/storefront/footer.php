@@ -29,13 +29,12 @@
 								
 								<div class="col-md-4 footer-grid">
 									<h4>Thông tin</h4>
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="products.html">Products</a></li>
-										<li><a href="codes.html">Short Codes</a></li>
-										<li><a href="mail.html">Mail Us</a></li>
-										<li><a href="products1.html">products1</a></li>
-									</ul>
+										<?php 
+									wp_nav_menu( array(
+									    'menu' => 'menu-main',
+									    'container' => 'ul',
+									    'menu_class'=> 'nav navbar-nav'
+									 ) ); ?>
 								</div>
 								<div class="col-md-4 footer-grid foot">
 									<h4>Liên hệ</h4>

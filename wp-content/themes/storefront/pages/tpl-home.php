@@ -17,7 +17,11 @@ Template Name: home page
 							    	while ( have_rows('images') ) : the_row(); ?>
 
 							      	<div class="core-slider_item">
-										<img src="<?= get_sub_field('image') ?>" class="img-responsive" alt="shop-nhat">
+							      		<?php 
+							      		$id_acf = get_sub_field('image');
+							      		$image = wp_get_attachment_image_src($id_acf, 'img_home_banner' ); ?>
+										
+										<img src="<?= $image[0]; ?>" class="img-responsive" alt="shop-nhat">
 									</div>
 										<?php
 							    endwhile;
@@ -56,12 +60,12 @@ Template Name: home page
 
 								<?php $thumb_id = get_woocommerce_term_meta( $terms_category_hot[0]->term_id, 'thumbnail_id', true );
 								
-                                $term_img = wp_get_attachment_url(  $thumb_id );
+                                $term_img = wp_get_attachment_image_src(  $thumb_id,'img_home_hot1' );
                             
                                 ?>
 
 
-								<a href="<?= get_term_link( $terms_category_hot[0]->slug, 'product_cat' ) ?>"><img src="<?= $term_img; ?>" class="img-responsive" alt="shop-nhat"/></a>
+								<a href="<?= get_term_link( $terms_category_hot[0]->slug, 'product_cat' ) ?>"><img src="<?= $term_img[0]; ?>" class="img-responsive" alt="shop-nhat"/></a>
 								<div class="ban-text">
 									<h4><?= $terms_category_hot[0]->name; ?></h4>
 								</div>
@@ -73,11 +77,10 @@ Template Name: home page
 						<div class="col-md-6 ban-bottom3">
 							<div class="ban-top">
 								<?php $thumb_id1 = get_woocommerce_term_meta( $terms_category_hot[1]->term_id, 'thumbnail_id', true );
-								
-                                $term_img1 = wp_get_attachment_url(  $thumb_id1 );
+                                $term_img1 = wp_get_attachment_image_src(  $thumb_id1,'img_home_hot2' );
                                 
-                                 ?>
-									<a href="<?= get_term_link( $terms_category_hot[1]->slug, 'product_cat' ) ?>"><img src="<?= $term_img1  ?>" class="img-responsive" alt="shop-nhat"/></a>
+                                ?>
+									<a href="<?= get_term_link( $terms_category_hot[1]->slug, 'product_cat' ) ?>"><img src="<?= $term_img1[0]  ?>" class="img-responsive" alt="shop-nhat"/></a>
 								<div class="ban-text1">
 									<h4><?= $terms_category_hot[1]->name; ?></h4>
 								</div>
@@ -87,10 +90,10 @@ Template Name: home page
 									<div class="ban-top">
 										<?php $thumb_id2 = get_woocommerce_term_meta( $terms_category_hot[2]->term_id, 'thumbnail_id', true );
 								
-		                                $term_img2 = wp_get_attachment_url(  $thumb_id2 );
+		                                $term_img2 = wp_get_attachment_image_src(  $thumb_id2,'img_home_hot3' );
 		                                
 		                                 ?>
-		                                 <a href="<?= get_term_link( $terms_category_hot[3]->slug, 'product_cat' ) ?>"><img src="<?= $term_img2 ?>" class="img-responsive" alt="shop-nhat"/></a>
+		                                 <a href="<?= get_term_link( $terms_category_hot[3]->slug, 'product_cat' ) ?>"><img src="<?= $term_img2[0] ?>" class="img-responsive" alt="shop-nhat"/></a>
 										
 										<div class="ban-text1">
 											<h4><?= $terms_category_hot[2]->name; ?></h4>
@@ -101,10 +104,10 @@ Template Name: home page
 									<div class="ban-top">
 										<?php $thumb_id3 = get_woocommerce_term_meta( $terms_category_hot[3]->term_id, 'thumbnail_id', true );
 								
-		                                $term_img3 = wp_get_attachment_url(  $thumb_id3 );
+		                                $term_img3 = wp_get_attachment_image_src(  $thumb_id3,'img_home_hot3' );
 		                                
 		                                 ?>
-											<a href="<?= get_term_link( $terms_category_hot[3]->slug, 'product_cat' ) ?>"><img src="<?= $term_img3 ?>" class="img-responsive" alt=""/></a>
+											<a href="<?= get_term_link( $terms_category_hot[3]->slug, 'product_cat' ) ?>"><img src="<?= $term_img3[0] ?>" class="img-responsive" alt=""/></a>
 										<div class="ban-text1">
 											<h4><?= $terms_category_hot[3]->name; ?></h4>
 										</div>
@@ -134,7 +137,7 @@ Template Name: home page
 									'post_type' => 'product',
 									'orderby' => 'publish_date',
 									'order'   => 'DESC',
-									'posts_per_page'      => 4,
+									'posts_per_page'      => 12,
 									'post_status' => 'publish',
 									'ignore_sticky_posts'   => 1,
 								);
@@ -261,18 +264,17 @@ Template Name: home page
       						'number'     => $number
 							) );
     					?>
-    					<?php foreach( $terms_list_category as $category ): ?>
+    					<?php foreach( $terms_list_category as $category ): ?> 
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
 								<?php 
 								$thumb_id1 = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
 								
-                                $term_img1 = wp_get_attachment_image_src(  $thumb_id1, 'img_home_category' ); ?>
-                          
+                                $term_img1 = wp_get_attachment_image_src(  $thumb_id1,"img_home_category"); ?>
                                 <a href="<?= get_term_link( $category->slug, 'product_cat' ) ?>"><img  src="<?= $term_img1[0]; ?>" class="img-responsive"  alt="shop-nhat"></a>
 								
 								<div class="latest-text">
-									<h4><?= $category->name; ?></h4>
+									<h4><?= $category->name; ?></h4> 
 								</div>
 							</div>
 						</div>

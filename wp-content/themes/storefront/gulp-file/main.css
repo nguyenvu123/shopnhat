@@ -82,3 +82,7 @@ h2 {
 
 .footer-w3l #menu-menu-main-1 {
   text-align: left; }
+.arrivals-grids {
+    display: flex;
+    flex-wrap: wrap;
+}
